@@ -77,10 +77,10 @@ class DBStorage:
     
     def get(self, cls, id):
         """ Retrives one object from the database """
-        if (cls not in self.__models_available) or (id_ is None):
+        if (cls not in classes.keys()) or (id is None):
             return None
         return self.__session.query(
-                self.__models_available[cls]).get(id_)
+                classes[cls]).get(id)
 
     def count(self, cls=None):
         """ Returns the number of objects in storage matching the given class. """

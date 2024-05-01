@@ -13,7 +13,7 @@ def amenities():
     return jsonify(all_amenities)
 
 
-@app_views.route("/amenities/<int: amenity_id>", methods=["GET"], strict_slashes=False)
+@app_views.route("/amenities/<int:amenity_id>", methods=["GET"], strict_slashes=False)
 def amenity(amenity_id):
     """ Retrieves a Amenity object """
     amenity = storage.get("Amenity", amenity_id)

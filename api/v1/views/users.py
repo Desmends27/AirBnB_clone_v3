@@ -3,8 +3,7 @@
 from flask import Blueprint, jsonify, abort, request
 from models import storage
 from models.user import User
-
-app_views = Blueprint('users', __name__, url_prefix='/api/v1')
+from api.v1.views import app_views
 
 
 @app_views.route("/", methods=["GET"], strict_slashes=False)

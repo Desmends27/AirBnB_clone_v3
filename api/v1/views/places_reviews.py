@@ -5,8 +5,7 @@ from models import storage
 from models.review import Review
 from models.place import Place
 from models.user import User
-
-app_views = Blueprint('reviews', __name__, url_prefix='/api/v1')
+from api.v1.views import app_views
 
 
 @app_views.route("/places/<place_id>/reviews", methods=["GET"],

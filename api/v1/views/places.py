@@ -5,8 +5,7 @@ from models import storage
 from models.place import Place
 from models.city import City
 from models.user import User
-
-app_views = Blueprint('places', __name__, url_prefix='/api/v1')
+from api.v1.views import app_views
 
 
 @app_views.route("/cities/<city_id>/places", methods=["GET"],

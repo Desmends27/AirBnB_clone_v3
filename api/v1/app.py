@@ -15,7 +15,7 @@ def storage_close(exception):
     """ Calls the storage.close method """
     storage.close()
 
-@app.errorhandler(404)
+@app_views.errorhandler(404)
 def error404(e):
     """ Prints a not found for incorrect url's """
     error = {

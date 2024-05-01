@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" flask application  instance created here"""
 from flask import Flask
 from flask import Blueprint
 from models import storage

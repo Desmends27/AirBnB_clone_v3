@@ -4,6 +4,7 @@ from api.v1.views import app_views
 from flask import jsonify
 from models import storage
 from flask import abort, request
+from models.state import State
 
 @app_views.route("/states/", methods=["GET"])
 def states():

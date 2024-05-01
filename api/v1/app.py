@@ -21,7 +21,7 @@ def error404(e):
     error = {
             "error" : "Not found"
             }
-    return make_response(jsonify(error))
+    return jsonify(error), 404
 
 
 if __name__ == "__main__":

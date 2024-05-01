@@ -2,9 +2,9 @@
 """ Create the blueprint for Review objects """
 from flask import Blueprint, jsonify, abort, request
 from models import storage
-from models.review import Review
 from models.place import Place
-from models.user import User
+from models.review import Review
+from models.state import State
 from api.v1.views import app_views
 
 

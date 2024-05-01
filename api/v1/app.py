@@ -15,13 +15,13 @@ def storage_close(exception):
     """ Calls the storage.close method """
     storage.close()
 
-@app_views.errorhandler(404)
+@app.errorhandler(404)
 def error404(e):
     """ Prints a not found for incorrect url's """
     error = {
             "error" : "Not found"
             }
-    return jsonify(error)
+    return make_response(jsonify(error))
 
 
 if __name__ == "__main__":

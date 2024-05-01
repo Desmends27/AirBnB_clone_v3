@@ -1,11 +1,13 @@
+#!/usr/bin/python3
 from flask import Flask
 from flask import Blueprint
 from models import storage
 from api.v1.views import app_views
-import os 
+import os
 
 app = Flask(__name__)
 app.register_blueprint(app_views)
+
 
 @app.teardown_appcontext
 def storage_close(self):
